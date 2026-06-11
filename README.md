@@ -34,6 +34,16 @@ Los docentes pueden crear y administrar cursos, gestionar evaluaciones y realiza
 
 ---
 
+### Diagramas
+
+| Archivo | Descripción |
+|---------|-------------|
+| [diagrams/arquitectura.png](diagrams/arquitectura.png) | Diagrama de arquitectura con trust boundaries |
+| [diagrams/arquitectura.svg](diagrams/arquitectura.svg) | Exportación vectorial desde draw.io |
+| [diagrams/arquitectura.drawio](diagrams/arquitectura.drawio) | Versión editable (draw.io) |
+
+---
+
 ## Metodologías Utilizadas
 
 * **STRIDE** — Modelado de amenazas por categoría
