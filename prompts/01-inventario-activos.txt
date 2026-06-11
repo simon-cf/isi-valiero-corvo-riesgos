@@ -1,0 +1,19 @@
+# Prompt: Inventario de activos
+
+**Fecha:** Junio 2026
+**Herramienta:** ChatGPT (GPT-5.5)
+
+---
+
+## Prompt
+
+Estoy trabajando en un análisis de riesgos para una plataforma LMS (Learning Management System) de educación online. El stack es Vue.js + Django + PostgreSQL, con CDN para videos, API externa de certificados y foros de discusión.
+
+Necesito un inventario de activos dividido en:
+1. Activos de información (con clasificación Alta/Media/Baja y valoración C/I/D)
+2. Activos tecnológicos (con criticidad y dependencias)
+3. Activos intangibles (reputación, integridad académica, cumplimiento COPPA)
+
+Incluí como mínimo: datos personales de estudiantes (pueden ser menores), credenciales, banco de preguntas, resultados de evaluaciones, certificados digitales, material educativo con propiedad intelectual, publicaciones en foros, logs de auditoría, y los componentes técnicos del sistema.
+
+Formato: tablas markdown con IDs (A01, A02... para información; T01, T02... para tecnología). En español.

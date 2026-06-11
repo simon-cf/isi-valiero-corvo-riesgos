@@ -1,0 +1,18 @@
+# Prompt: Plan de mitigación
+
+**Fecha:** Junio 2026
+**Herramienta:** ChatGPT (GPT-5.5)
+
+---
+
+## Prompt
+
+Para una plataforma LMS (Vue.js + Django + PostgreSQL) con amenazas críticas en SQL injection, credenciales robadas, filtración de banco de preguntas y mass assignment, necesito un plan de mitigación.
+
+Estructurá el plan en:
+1. Cuatro pilares: Protección de Identidad, Protección de Datos Académicos, Integridad Académica, Disponibilidad
+2. Tabla de controles NIST SP 800-53 (AC-2, AC-3, AC-6, AC-7, IA-2, AU-2, AU-6, AU-9, SC-8, SC-28, SI-10, SI-4) con aplicación concreta en la plataforma
+3. Mitigaciones específicas por componente: Frontend Vue.js, Backend Django, PostgreSQL, API Certificados, CDN, Foro
+4. Plan de implementación con prioridad (Alta/Media/Baja), responsable y plazo, referenciando IDs de amenazas (TH05, TH11, TH18, TH20, TH27, etc.)
+
+Las recomendaciones deben ser técnicas y viables para Django/Vue.js (ORM parametrizado, bleach, DOMPurify, httpOnly cookies, MFA con django-otp, pre-signed URLs, HSM/KMS para certificados). En español, formato markdown.

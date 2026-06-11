@@ -1,0 +1,24 @@
+# Prompt: Arquitectura y trust boundaries
+
+**Fecha:** Junio 2026
+**Herramienta:** ChatGPT (GPT-5.5)
+
+---
+
+## Prompt
+
+Para una plataforma LMS con frontend Vue.js, backend Django (REST API + JWT), PostgreSQL, CDN de videos, API externa de certificados y servicio de email, necesito documentar la arquitectura para threat modeling.
+
+Generá:
+1. Un diagrama en texto ASCII con actores (Estudiante, Docente, Administrador, Atacante externo) y componentes
+2. Los 4 trust boundaries (TB-01 a TB-04) con descripción de cada uno
+3. Tres flujos de datos: realización de examen, visualización de contenido vía CDN, emisión de certificado
+4. Tabla de actores con privilegios
+
+Los trust boundaries deben ser:
+- TB-01: Usuarios ↔ Aplicación (Internet)
+- TB-02: Frontend ↔ Backend
+- TB-03: Backend ↔ Servicios externos
+- TB-04: Backend ↔ Base de datos
+
+Incluí los protocolos de comunicación (HTTPS/TLS 1.3, REST API, pre-signed URLs, etc.). Formato markdown, en español.

@@ -1,0 +1,23 @@
+# Prompt: Priorización DREAD
+
+**Fecha:** Junio 2026
+**Herramienta:** Claude (Anthropic)
+
+---
+
+## Prompt
+
+Tengo 27 amenazas STRIDE identificadas para una plataforma LMS (TH01 a TH27). Necesito priorizarlas con la metodología DREAD.
+
+Para cada amenaza, puntá de 1 a 10 en:
+- Damage Potential (D)
+- Reproducibility (R)
+- Exploitability (E)
+- Affected Users (A)
+- Discoverability (D₂)
+
+Calculá el promedio y clasificá: 8-10 Crítico, 6-7.9 Alto, 4-5.9 Medio, <4 Bajo.
+
+Generá una tabla markdown con todas las amenazas ordenadas por promedio descendente.
+
+Luego, para las 4 amenazas críticas (SQL injection TH11, credenciales robadas TH05, filtración banco de preguntas TH20, mass assignment TH27), justificá cada dimensión DREAD con un párrafo explicando por qué ese puntaje. En español.

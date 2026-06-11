@@ -1,0 +1,17 @@
+# Prompt: Riesgos residuales 
+
+**Fecha:** Junio 2026
+**Herramienta:** Claude (Anthropic)
+
+---
+
+## Prompt
+
+Después de implementar un plan de mitigación para una plataforma LMS (MFA, RBAC, sanitización XSS, firma digital de certificados, pre-signed URLs, audit logs), necesito documentar:
+
+1. **Riesgos residuales** : para cada uno incluir riesgo inherente, mitigaciones aplicadas, riesgo residual final y compensating control. Considerá: phishing avanzado que bypass MFA, zero-days en Django/PostgreSQL, uso de IA en exámenes, insider threat en banco de preguntas, compartición de cuentas, grabación/redistribución de videos, DDoS en períodos de evaluación.
+
+2. **Análisis detallado** de los riesgos residuales más críticos.
+
+
+

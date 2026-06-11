@@ -1,0 +1,19 @@
+# Prompt: Mapeo MITRE ATT&CK
+
+**Fecha:** Junio 2026
+**Herramienta:** ChatGPT (GPT-5.5)
+
+---
+
+## Prompt
+
+Tengo un análisis STRIDE de una plataforma LMS con amenazas como: credenciales robadas (TH05), SQL injection (TH11), escalación de privilegios (TH10), stored XSS en foros (TH18/TH19), filtración de banco de preguntas (TH20), emisión fraudulenta de certificados (TH16), modificación de notas (TH22).
+
+Mapeá cada amenaza a técnicas de MITRE ATT&CK Enterprise. Para cada mapeo incluí:
+- ID de amenaza
+- Técnica ATT&CK (nombre e ID, ej. T1078 Valid Accounts)
+- Subtécnica si aplica
+- Táctica (Initial Access, Privilege Escalation, Credential Access, Collection, Impact, etc.)
+- Mitigación ATT&CK recomendada (ej. M1032 Multi-factor Authentication)
+
+Formato: tabla markdown. Al final, describí un kill chain hipotético de un atacante que compromete una cuenta de docente y emite certificados fraudulentos, indicando qué técnicas ATT&CK usaría en cada paso. En español.

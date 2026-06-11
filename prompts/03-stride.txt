@@ -1,0 +1,24 @@
+# Prompt: Análisis STRIDE
+
+**Fecha:** Junio 2026
+**Herramienta:** ChatGPT (GPT-5.5)
+
+---
+
+## Prompt
+
+Tengo una plataforma LMS (Vue.js + Django + PostgreSQL) con estos componentes: Frontend, Backend Django, PostgreSQL, Auth JWT, API de certificados, CDN de videos, Foro de discusión, Módulo de exámenes.
+
+Aplicá la metodología STRIDE (Spoofing, Tampering, Repudiation, Information Disclosure, Denial of Service, Elevation of Privilege) a cada componente.
+
+Para cada amenaza generá una fila en tabla markdown con:
+- ID (TH01, TH02...)
+- Componente afectado
+- Categoría STRIDE
+- Descripción de la amenaza
+- CWE asociado
+- Contramedida principal
+
+Enfocate en amenazas realistas para e-learning: robo de sesión, XSS en foros, SQL injection, filtración de banco de preguntas, emisión fraudulenta de certificados, mass assignment en Django, escalación de privilegios, uso de IA en exámenes.
+
+Mínimo 20 amenazas. Luego elegí 3 amenazas prioritarias y desarrollá un análisis detallado de cada una (descripción, activos afectados, impacto, probabilidad). En español.
