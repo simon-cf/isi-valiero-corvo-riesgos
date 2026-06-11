@@ -2,75 +2,43 @@
 
 ## 2.1 Diagrama de Arquitectura
 
+> Diagramas completos en la carpeta [`diagrams/`](../diagrams/):
+> - [`arquitectura.png`](../diagrams/arquitectura.png) — exportación para presentación
+> - [`arquitectura.svg`](../diagrams/arquitectura.svg) — exportación vectorial (draw.io)
+> - [`arquitectura.drawio`](../diagrams/arquitectura.drawio) — editable en draw.io
+
+![Diagrama de arquitectura con trust boundaries](../diagrams/arquitectura.png)
+
+### Vista simplificada (ASCII)
+
 ```text
-                ┌─────────────────┐
-                │   Estudiante    │
-                └────────┬────────┘
-                         │
-                ┌────────▼────────┐
-                │    Docente      │
-                └────────┬────────┘
-                         │
-                ┌────────▼────────┐
-                │ Administrador   │
-                └────────┬────────┘
-
-═══════════════════════════════════════
- TRUST BOUNDARY TB-01
- Usuarios ↔ Aplicación
-═══════════════════════════════════════
-
-                         │ HTTPS
-                         ▼
-
-                ┌─────────────────┐
-                │ Frontend Vue.js │
-                └────────┬────────┘
-
-═══════════════════════════════════════
- TRUST BOUNDARY TB-02
- Frontend ↔ Backend
-═══════════════════════════════════════
-
-                         │ REST API
-                         ▼
-
-                ┌─────────────────┐
-                │ Django Backend  │
-                │                 │
-                │ - Auth Service  │
-                │ - Courses       │
-                │ - Exams         │
-                │ - Forums        │
-                │ - Certificates  │
-                └───┬─────┬───────┘
-                    │     │
-                    │     │
-                    │     ▼
-
-═══════════════════════════════════════
- TRUST BOUNDARY TB-03
- Servicios Externos
-═══════════════════════════════════════
-
-              ┌───────────────┐
-              │ API Certificados │
-              └───────────────┘
-
-              ┌───────────────┐
-              │ CDN Videos    │
-              └───────────────┘
-
-═══════════════════════════════════════
- TRUST BOUNDARY TB-04
- Datos Persistentes
-═══════════════════════════════════════
-
-                     ▼
-
-              ┌───────────────┐
-              │ PostgreSQL    │
-              └───────────────┘
+  Estudiante / Docente / Administrador          Atacante externo
+              │                                        │
+              │ HTTPS / TLS 1.3                      │ (superficie de ataque)
+              ▼                                        ▼
+═══════════════════════════════════════════════════════════════
+ TB-01  Usuarios ↔ Aplicación
+═══════════════════════════════════════════════════════════════
+              Frontend Vue.js (T01)
+              │
+              │ REST API + Bearer JWT
+              ▼
+═══════════════════════════════════════════════════════════════
+ TB-02  Frontend ↔ Backend
+═══════════════════════════════════════════════════════════════
+              Django Backend (T02)
+              ├── Auth Service (T04)
+              ├── Courses / Exams / Forums (T05)
+              └── Certificates
+         ┌────┴────┬──────────────┐
+         │         │              │
+         ▼         ▼              ▼
+═══════════════════════════════════════════════════════════════
+ TB-03  Servicios Externos              TB-04  Datos Persistentes
+═══════════════════════════════════════════════════════════════
+  CDN Videos (T06)                       PostgreSQL (T03)
+  API Certificados (T07)                 A01–A06, A09, A10
+  Email Service (T08)
 ```
 
 ## 2.2 Flujo de Datos
